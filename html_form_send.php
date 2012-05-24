@@ -61,9 +61,67 @@ $headers = 'From: '.$email_from."\r\n".
 @mail($email_to, $email_subject, $email_message, $headers);  
 ?>
 
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Art Taylor | Contact</title>
+        <link rel="Stylesheet" type="text/css" href="../css/smoothDivScroll.css" /><!-- the CSS for Smooth Div Scroll -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" type="text/javascript"></script><!-- jQuery library - I get it from Google API's -->
+	<script src="../javascript/jquery.ui.widget.js" type="text/javascript"></script><!-- jQuery UI widget factory -->
+	<script src="../javascript/jquery.smoothDivScroll-1.1-min.js" type="text/javascript"></script><!-- Smooth Div Scroll 1.1 - minified for faster loading-->
+	<link rel="stylesheet" type="text/css" href="../css/random.css" /><!-- Styles for my specific scrolling content -->
+	<link rel="stylesheet" type="text/css" href="../css/bg.css" /><!--body content background -->
+		<script type="text/javascript">
+		// Initialize the plugin with no custom options
+		$(window).load(function() {
+			$("div#makeMeScrollable").smoothDivScroll({});
+		});
+	</script>
+    </head>
+    <body>
+    	<div id ="wrapper">
+<center>
+	
+	
 
+<?php include("../includes/nav.php"); ?>
 
-Thank you for contacting us. We will be in touch with you very soon.
+</center>
+<article id ="contactpara">
+	<div id = "box">
+	<div id ="contactList">
+		<div class="contactBox padding">
+
+	<div class="alignCenter">
+		
+		
+Thank you, I will get back as soon as I can
+</BR>
+</br>
+-Art Taylor
+<br />
+		<a href="contact.php">back</a>
+				
+				
+				
+					
+					
+			
+		
+		
+	</div>
+
+</div><!--end id box-->
+</article><!--- ... -->
+<div class="clearfooter">
+</div><!--ends clearfooter-->
+</div>
+<div id = "footer">
+	<?php include("../includes/footer.php"); ?>
+</div>
+    </body>
+</html>
+
 
 <?php
 }
