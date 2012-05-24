@@ -1,30 +1,30 @@
 <?php
 if(isset($_POST['email'])) {
 	
-	// CHANGE THE TWO LINES BELOW
+
 	$email_to = "arttay1190@yahoo.com";
 	
 	$email_subject = "website html form submissions";
 	
 	
 	function died($error) {
-		// your error code can go here
+		
 		echo "We're sorry, but there's errors found with the form you submitted.<br /><br />";
 		echo $error."<br /><br />";
 		echo "Please go back and fix these errors.<br /><br />";
 		die();
 	}
 	
-	// validation expected data exists
+
 	if(!isset($_POST['first_name']) ||
 		!isset($_POST['email']) ||
 		!isset($_POST['message'])) {
 		died('We are sorry, but there appears to be a problem with the form you submitted.');		
 	}
 	
-	$first_name = $_POST['first_name']; // required
-	$email_from = $_POST['email']; // required
-	$comments = $_POST['message']; // required
+	$first_name = $_POST['first_name']; 
+	$email_from = $_POST['email']; 
+	$comments = $_POST['message']; 
 	
 	$error_message = "";
 	$email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
@@ -54,7 +54,7 @@ if(isset($_POST['email'])) {
 	$email_message .= "Comments: ".clean_string($comments)."\n";
 	
 	
-// create email headers
+
 $headers = 'From: '.$email_from."\r\n".
 'Reply-To: '.$email_from."\r\n" .
 'X-Mailer: PHP/' . phpversion();
