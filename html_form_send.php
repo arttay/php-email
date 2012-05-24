@@ -61,7 +61,7 @@ $headers = 'From: '.$email_from."\r\n".
 @mail($email_to, $email_subject, $email_message, $headers);  
 ?>
 
-<!-- place your own success html below -->
+
 
 Thank you for contacting us. We will be in touch with you very soon.
 
